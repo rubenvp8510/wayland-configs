@@ -265,4 +265,9 @@ input "type:keyboard" {
 default_border pixel 2
 default_floating_border pixel 2
 
-
+bindsym $mod+m [class="Slack"] scratchpad show, move position center
+bindsym Print exec grim ~/Pictures/screenshot-$(date +%F-%T).png
+bindsym Shift+Print exec grim -g "$(slurp)" ~/Pictures/screenshot-$(date +%F-%T).png
+bindsym Ctrl+Shift+Print exec grim -g "$(slurp)" - | wl-copy
+bindsym Ctrl+Print exec grim - | wl-copy
+bindsym Alt+Shift+Print exec grim -g "$(slurp)" - | swappy -f -
